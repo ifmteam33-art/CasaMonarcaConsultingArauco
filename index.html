@@ -290,6 +290,33 @@
   footer { border-top: 1px solid rgba(201,122,20,0.12); padding: 1.8rem 2.5rem; text-align: center; color: var(--muted); font-size: 0.76rem; }
   footer span { color: var(--gold); }
 
+  /* ── REFERENCES ── */
+  .ref-section { max-width: 1000px; margin: 0 auto; padding: 0 2.5rem 3rem; }
+  .ref-toggle {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.78rem; font-weight: 600; color: var(--muted);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    cursor: pointer; border: none; background: none;
+    padding: 0.75rem 0; border-top: 1px solid rgba(201,122,20,0.1);
+    width: 100%; transition: color 0.2s;
+  }
+  .ref-toggle:hover { color: var(--amber); }
+  .ref-toggle i { font-size: 1rem; transition: transform 0.2s; }
+  .ref-toggle.open i.ti-chevron-down { transform: rotate(180deg); }
+  .ref-body { display: none; padding: 1.2rem 0 0.5rem; }
+  .ref-body.open { display: block; }
+  .ref-category { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin: 1.2rem 0 0.5rem; }
+  .ref-category:first-child { margin-top: 0; }
+  .ref-item {
+    display: flex; gap: 0.75rem; align-items: flex-start;
+    padding: 0.45rem 0; border-bottom: 1px solid rgba(201,122,20,0.06);
+    font-size: 0.78rem; color: var(--muted); line-height: 1.6;
+  }
+  .ref-item:last-child { border-bottom: none; }
+  .ref-num { color: var(--amber); font-weight: 700; min-width: 1.4rem; flex-shrink: 0; font-size: 0.72rem; }
+  .ref-item strong { color: var(--cream); }
+  .src { font-size: 0.72rem; color: var(--muted); font-style: italic; margin-top: 0.15rem; display: block; }
+
   @media(max-width:640px){ nav{padding:0 1.2rem;} .nav-links a{font-size:0.73rem;padding:0.35rem 0.55rem;} .hero,.section{padding-left:1.2rem;padding-right:1.2rem;} }
 </style>
 </head>
@@ -420,6 +447,45 @@
       <div class="chart-h"><canvas id="chartGDP"></canvas></div>
     </div>
   </div>
+
+  <div class="ref-section">
+    <button class="ref-toggle" onclick="toggleRef('ref-macro')">
+      <i class="ti ti-book" aria-hidden="true"></i> References &amp; Sources
+      <i class="ti ti-chevron-down" style="margin-left:auto;" aria-hidden="true"></i>
+    </button>
+    <div class="ref-body" id="ref-macro">
+      <div class="ref-category">Inflation</div>
+      <div class="ref-item"><span class="ref-num">[1]</span><div><strong>INEGI (April 2026)</strong> — National Consumer Price Index, April 2026. Mexico headline CPI 4.45%, core CPI 4.26%.<span class="src">Team 3 Deliverable 2, Table 1 · inegi.org.mx/temas/inpc/</span></div></div>
+      <div class="ref-item"><span class="ref-num">[2]</span><div><strong>U.S. Bureau of Labor Statistics — BLS (April 2026)</strong> — CPI Summary April 2026. U.S. headline CPI 3.8%, core CPI 2.8%.<span class="src">Team 3 Deliverable 2, Table 1 · bls.gov</span></div></div>
+      <div class="ref-item"><span class="ref-num">[3]</span><div><strong>Banxico Q2 2026 Quarterly Inflation Report</strong> — Mexico inflation target 3% ±1pp; convergence projected Q2 2027.<span class="src">Team 3 Deliverable 2, Table 2 · banxico.org.mx</span></div></div>
+      <div class="ref-item"><span class="ref-num">[4]</span><div><strong>Mexico News Daily (May 8, 2026)</strong> — "Inflation decline prompts Banxico to cut its interest rate." April CPI fell to 4.45% from 4.59% in March.<span class="src">Team 3 Deliverable 2, Section 1.4 · mexiconewsdaily.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[5]</span><div><strong>CNBC / Al Jazeera (May 12, 2026)</strong> — Iran war sends U.S. CPI to 3.8%, highest since 2023. Fed held rates at 3.50–3.75%.<span class="src">Team 3 Deliverable 2, Section 1.4 · cnbc.com / aljazeera.com</span></div></div>
+
+      <div class="ref-category">Interest Rates</div>
+      <div class="ref-item"><span class="ref-num">[6]</span><div><strong>Banco de México — Monetary Policy Statement (May 8, 2026)</strong> — Banxico voted 3-2 to cut benchmark rate to 6.50%; 13th consecutive cut since March 2024.<span class="src">Team 3 Deliverable 2, Table 3 · banxico.org.mx</span></div></div>
+      <div class="ref-item"><span class="ref-num">[7]</span><div><strong>Federal Reserve (2026)</strong> — Fed held benchmark rate at 3.50–3.75% for third consecutive meeting. Next cut pushed to December 2026.<span class="src">Team 3 Deliverable 2, Table 3 · federalreserve.gov</span></div></div>
+      <div class="ref-item"><span class="ref-num">[8]</span><div><strong>Rio Times Online (April 2026)</strong> — "The Superpeso of 2025": peso appreciated ~16% against the dollar, hitting ~17.1 MXN/USD in February 2026.<span class="src">Team 3 Deliverable 2, Section 2.4 · riotimesonline.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[9]</span><div><strong>Oxford Economics via Al Jazeera (May 2026)</strong> — Fed to hold through 2026; 39% market probability of a rate hike due to Iran war inflation.<span class="src">Team 3 Deliverable 2, Section 2.4 · aljazeera.com</span></div></div>
+
+      <div class="ref-category">Economic Growth (GDP)</div>
+      <div class="ref-item"><span class="ref-num">[10]</span><div><strong>FocusEconomics / Mexico Business News (April 30, 2026)</strong> — Mexico GDP contracted 0.8% QoQ in Q1 2026; worst since Q4 2024. Industrial output fell 1.1%.<span class="src">Team 3 Deliverable 2, Table 5 · focus-economics.com / mexicobusiness.news</span></div></div>
+      <div class="ref-item"><span class="ref-num">[11]</span><div><strong>Philadelphia Fed / IMF (2026)</strong> — U.S. Q1 2026 GDP +2.7%. Full-year U.S. forecast: 2.2%.<span class="src">Team 3 Deliverable 2, Table 5 · philadelphiafed.org / imf.org</span></div></div>
+      <div class="ref-item"><span class="ref-num">[12]</span><div><strong>Dallas Fed (March 2026)</strong> — Mexico full-year 2026 GDP forecast: 1.2–1.5%. Gross fixed investment fell 4.2% YoY for 17 consecutive months.<span class="src">Team 3 Deliverable 2, Section 3.4 · dallasfed.org</span></div></div>
+
+      <div class="ref-category">Employment</div>
+      <div class="ref-item"><span class="ref-num">[13]</span><div><strong>INEGI (April 2026)</strong> — Mexico unemployment rate: 2.4%. Total employed: 60.2 million. Informal employment: 54.8%.<span class="src">Team 3 Deliverable 2, Table 6 · inegi.org.mx</span></div></div>
+      <div class="ref-item"><span class="ref-num">[14]</span><div><strong>BLS Employment Situation Report (May 8, 2026)</strong> — U.S. unemployment 4.3%. Nonfarm payrolls +115,000 in April 2026.<span class="src">Team 3 Deliverable 2, Table 6 · bls.gov</span></div></div>
+      <div class="ref-item"><span class="ref-num">[15]</span><div><strong>Rio Times Online / Dallas Fed (April 2026)</strong> — Mexico manufacturing employment fell for 35 consecutive months. IGAE manufacturing index -1.7% YoY.<span class="src">Team 3 Deliverable 2, Section 4.4 · riotimesonline.com / dallasfed.org</span></div></div>
+      <div class="ref-item"><span class="ref-num">[16]</span><div><strong>Rio Times Online (2025–2026)</strong> — Mexico remittances fell 7.5% YoY in mid-2025 due to U.S. immigration enforcement. Remittances = 3.5% of Mexico's GDP.<span class="src">Team 3 Deliverable 2, Section 4.4 · riotimesonline.com</span></div></div>
+
+      <div class="ref-category">Foreign Investment &amp; Nearshoring</div>
+      <div class="ref-item"><span class="ref-num">[17]</span><div><strong>American Industries Group (November 2025)</strong> — Mexico FDI full year 2025: $40.9 billion; 5th consecutive record year. Manufacturing = ~37% of total FDI.<span class="src">Team 3 Deliverable 2, Table 8 · americanindustriesgroup.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[18]</span><div><strong>FreightWaves (April 13, 2026)</strong> — Mexico rose to 19th globally in Kearney FDI Confidence Index (+6 positions). Manufacturing exports to U.S.: $535B in 2025.<span class="src">Team 3 Deliverable 2, Section 5.4 · freightwaves.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[19]</span><div><strong>CSIS (April 2026)</strong> — USMCA first formal review scheduled for July 2026. Tighter rules of origin on Chinese-content inputs could disqualify some supply chains.<span class="src">Team 3 Deliverable 2, Section 5.4 · csis.org</span></div></div>
+      <div class="ref-item"><span class="ref-num">[20]</span><div><strong>Timber Trades Journal (June 2025) / Arauco (2025)</strong> — Arauco's USD 40M Alarcan expansion (Durango) and USD 250M Zitácuaro MDF project designed to capture nearshoring demand.<span class="src">Team 3 Deliverable 2, Section 5.3 · ttjonline.com / arauco.com</span></div></div>
+    </div>
+  </div>
+
   <footer>Report prepared by <span>Team 3</span> &nbsp;·&nbsp; International Financial Management &nbsp;·&nbsp; May 2026</footer>
 </div>
 
@@ -468,6 +534,36 @@
       </div>
     </div>
   </div>
+
+  <div class="ref-section">
+    <button class="ref-toggle" onclick="toggleRef('ref-risks')">
+      <i class="ti ti-book" aria-hidden="true"></i> References &amp; Sources
+      <i class="ti ti-chevron-down" style="margin-left:auto;" aria-hidden="true"></i>
+    </button>
+    <div class="ref-body" id="ref-risks">
+      <div class="ref-category">Legal &amp; Judicial Reform</div>
+      <div class="ref-item"><span class="ref-num">[1]</span><div><strong>McCarter &amp; English (December 2024)</strong> — "Judiciary Under Fire: Understanding Mexico's Controversial Judicial Reform." Popular election of judges weakens amparo protections; Moody's and Fitch issued warnings.<span class="src">Team 3 Deliverable 2, Section 2.1 · mccarter.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[2]</span><div><strong>Wilson Center (2024)</strong> — "Turning Point: The Impact of AMLO's Reforms on USMCA and Nearshoring." Institutional uncertainty dampens long-term capital commitments.<span class="src">Team 3 Deliverable 2, Section 2.1 · wilsoncenter.org</span></div></div>
+      <div class="ref-item"><span class="ref-num">[3]</span><div><strong>Allianz Country Risk Report — Mexico (2026)</strong> — Heightened institutional risk; judicial reform as major business environment shift.<span class="src">Team 3 Deliverable 2, Table 12 · allianz.com</span></div></div>
+      <div class="ref-category">Energy</div>
+      <div class="ref-item"><span class="ref-num">[4]</span><div><strong>Mexico Affairs (January 2026)</strong> — "Mexico Confronts Structural Bottlenecks in Energy and Governance." CFE grid not expanded fast enough; industrial parks require private backup generation.<span class="src">Team 3 Deliverable 2, Section 2.1 · mexico.affairs.media</span></div></div>
+      <div class="ref-item"><span class="ref-num">[5]</span><div><strong>IBA Net (2025)</strong> — "Mexico's Nearshoring Boom Threatened by Judicial Reforms." Energy sector re-nationalization; independent regulators absorbed into executive.<span class="src">Team 3 Deliverable 2, Table 12 · ibanet.org</span></div></div>
+      <div class="ref-category">Security &amp; Crime</div>
+      <div class="ref-item"><span class="ref-num">[6]</span><div><strong>Mexecution (2026)</strong> — "Mexico at a Crossroads in 2026." Cartel territorial control; companies allocate 2–10% of budgets to security.<span class="src">Team 3 Deliverable 2, Table 12 · mexecution.com</span></div></div>
+      <div class="ref-category">The 2026 Iran War</div>
+      <div class="ref-item"><span class="ref-num">[7]</span><div><strong>Al Jazeera (March 17, 2026)</strong> — U.S.-Israel operations against Iran launched February 28. Strait of Hormuz disrupted — 20% of global oil supply.<span class="src">Team 3 Deliverable 2, Section 3.1 · aljazeera.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[8]</span><div><strong>LSE Middle East Centre (April 2026)</strong> — Brent crude surged from ~$73 to above $110/barrel. OECD projects global GDP -0.3pp in 2026.<span class="src">Team 3 Deliverable 2, Section 3.1 · blogs.lse.ac.uk/mec</span></div></div>
+      <div class="ref-item"><span class="ref-num">[9]</span><div><strong>CBS News (May 2026)</strong> — Iran war dented U.S. economy. CPI hit 3.8% in April; gasoline above $4.50/gallon.<span class="src">Team 3 Deliverable 2, Section 3.1 · cbsnews.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[10]</span><div><strong>WEF (March 12, 2026)</strong> — "The Global Price Tag of War in the Middle East." Methanol and urea prices rising on energy cost pass-through.<span class="src">Team 3 Deliverable 2, Table 16 · weforum.org</span></div></div>
+      <div class="ref-category">USMCA &amp; Trade</div>
+      <div class="ref-item"><span class="ref-num">[11]</span><div><strong>CSIS / Opportimes (April 2026)</strong> — First formal USMCA review July 2026. Tighter rules of origin on Chinese-content inputs possible.<span class="src">Team 3 Deliverable 2, Section 5.4 · csis.org / opportimes.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[12]</span><div><strong>Ground News / Mexico Business (January 2026)</strong> — Mexico imposed new tariffs on non-FTA imports including Asian chemical and machinery suppliers.<span class="src">Team 3 Deliverable 2, Section 1.4 · ground.news</span></div></div>
+      <div class="ref-category">Nearshoring &amp; Sustainability</div>
+      <div class="ref-item"><span class="ref-num">[13]</span><div><strong>ARAUCO North America (2026)</strong> — Arauco holds FSC certification across its full portfolio. EUDR compliance pathway already in place.<span class="src">Team 3 Deliverable 2, Table 14 · arauco.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[14]</span><div><strong>Rio Times Online (April 2026)</strong> — AI infrastructure build-out in Mexico City and Monterrey creates new demand for industrial panels.<span class="src">Team 3 Deliverable 2, Table 17 · riotimesonline.com</span></div></div>
+    </div>
+  </div>
+
   <footer>Report prepared by <span>Team 3</span> &nbsp;·&nbsp; International Financial Management &nbsp;·&nbsp; May 2026</footer>
 </div>
 
@@ -639,10 +735,45 @@
       <div class="action-card"><div class="action-check"><i class="ti ti-check" aria-hidden="true"></i></div><div><h4>Covers $11.7M USD Exposure</h4><p>Full 6-month coverage of urea and methanol purchases — the 50% of product cost driving Arauco's FX risk.</p></div></div>
     </div>
   </div>
+  <div class="ref-section">
+    <button class="ref-toggle" onclick="toggleRef('ref-strategy')">
+      <i class="ti ti-book" aria-hidden="true"></i> References &amp; Sources
+      <i class="ti ti-chevron-down" style="margin-left:auto;" aria-hidden="true"></i>
+    </button>
+    <div class="ref-body" id="ref-strategy">
+      <div class="ref-category">Raw Material Prices</div>
+      <div class="ref-item"><span class="ref-num">[1]</span><div><strong>Methanex Monthly Average Regional Posted Contract Price History</strong> — Monthly methanol prices ($/MT) Jan 2020 – Nov 2025. Latest: $802/MT (Nov 2025).<span class="src">Deliverable 4 — Urea_y_metanol.xlsx, Sheet: Methanex Metanol · methanex.com</span></div></div>
+      <div class="ref-item"><span class="ref-num">[2]</span><div><strong>FOB Middle East Urea (Granular) — Historical Prices</strong> — Monthly urea prices ($/MT) Jan 2024 – Nov 2025. Latest: $382/MT (Nov 2025).<span class="src">Deliverable 4 — Urea_y_metanol.xlsx, Sheet: Urea</span></div></div>
+      <div class="ref-item"><span class="ref-num">[3]</span><div><strong>Arauco (2025) / Deliverable 4 Problem Statement</strong> — Arauco purchases ~3,000 tons of urea and ~1,000 tons of methanol per month. These represent 50% of product cost.<span class="src">Deliverable 4 instructions — Part 1 Exposure</span></div></div>
+
+      <div class="ref-category">FX Rate &amp; Market Data</div>
+      <div class="ref-item"><span class="ref-num">[4]</span><div><strong>Investing.com (May 28, 2026)</strong> — USD/MXN spot rate: 17.31. Today's range: 17.3077–17.4395. Opening price: 17.3540.<span class="src">investing.com/currencies/usd-mxn-historical-data</span></div></div>
+      <div class="ref-item"><span class="ref-num">[5]</span><div><strong>Banxico — Monetary Policy Statement (May 8, 2026)</strong> — Mexico benchmark rate: 6.50%. End of easing cycle that began March 2024.<span class="src">Team 3 Deliverable 2 + banxico.org.mx</span></div></div>
+      <div class="ref-item"><span class="ref-num">[6]</span><div><strong>Federal Reserve / Economia Hoy (May 2026)</strong> — SOFR rate: 3.60%. Fed held benchmark at 3.50–3.75% for third consecutive meeting.<span class="src">axisnegocios.com / federalreserve.gov</span></div></div>
+
+      <div class="ref-category">FX Forecasts</div>
+      <div class="ref-item"><span class="ref-num">[7]</span><div><strong>Citi Encuesta de Expectativas / El Financiero (April 21, 2026)</strong> — Analyst consensus YE 2026 forecast: 18.10 MXN/USD. Range: 17.00 (Morgan Stanley) to 19.03.<span class="src">elfinanciero.com.mx (April 21, 2026)</span></div></div>
+      <div class="ref-item"><span class="ref-num">[8]</span><div><strong>Morgan Stanley / Barclays (via El Financiero, April 2026)</strong> — Bullish peso scenario: 17.00–17.25 MXN/USD YE 2026. Most optimistic institutional forecast.<span class="src">elfinanciero.com.mx (April 21, 2026)</span></div></div>
+      <div class="ref-item"><span class="ref-num">[9]</span><div><strong>Banorte / Just2Trade (January–April 2026)</strong> — Bearish scenario: 19.23–19.30 MXN/USD. Consensus of analysts including Hacienda, Banorte, Citi cited by Just2Trade.<span class="src">j2t.com/es/solutions/blogview/pronostico-dolar-mexico/ · banxico.org.mx (April 2026 survey)</span></div></div>
+
+      <div class="ref-category">Hedging Strategy Methodology</div>
+      <div class="ref-item"><span class="ref-num">[10]</span><div><strong>Interest Rate Parity (IRP) Formula</strong> — Theoretical forward rate calculated as: F = S × e^((r_MX − r_US) × T) = 17.31 × e^((0.065 − 0.036) × 0.5) = 17.56 MXN/USD.<span class="src">Krugman, P. R., &amp; Obstfeld, M. (2022). International Economics: Theory and Policy, 12th ed. Pearson. (cited in Team 3 Deliverable 2)</span></div></div>
+      <div class="ref-item"><span class="ref-num">[11]</span><div><strong>Zero-Cost Collar Structure</strong> — Buy ATM Forward Call (K=17.56) + Sell OTM Put (K=16.79, 3% below spot). Net premium ≈ $0. Standard FX risk management instrument used by multinational corporations purchasing USD.<span class="src">Deliverable 4 — Team 3 original analysis</span></div></div>
+      <div class="ref-item"><span class="ref-num">[12]</span><div><strong>BBVA Research (October 2025)</strong> — Mexico economic outlook; rate differential forecast 275–300 bps through YE 2026.<span class="src">Team 3 Deliverable 2, Table 4 · bbvaresearch.com</span></div></div>
+    </div>
+  </div>
+
   <footer>Report prepared by <span>Team 3</span> &nbsp;·&nbsp; International Financial Management &nbsp;·&nbsp; May 2026</footer>
 </div>
 
 <script>
+function toggleRef(id) {
+  const body = document.getElementById(id);
+  const btn = body.previousElementSibling;
+  body.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
