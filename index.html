@@ -345,152 +345,209 @@
   <!-- HEDGING -->
   <section class="page" id="hedging">
     <p class="section-eyebrow">Deliverable 4 — Hedging Strategy</p>
-    <h2 class="section-title">MXN/USD Currency Swap<br>for Arauco México</h2>
-    <p class="section-lead">Casa Monarca Consulting designs a targeted Cross-Currency Swap covering only Arauco México's residual USD exposure — the unhedged portion of specialty chemical imports after accounting for existing natural hedges already embedded in the company's operations.</p>
+    <h2 class="section-title">Participating Forward<br>(Forward + Cross-Currency Swap)</h2>
+    <p class="section-lead">Casa Monarca Consulting recommends a two-leg, zero-cost structure that locks Arauco México's MXN/USD exchange rate for its H2 2026 chemical procurement cycle while capturing Mexico's positive interest rate differential.</p>
     <div class="divider"></div>
 
-    <!-- Natural hedges first -->
+    <!-- Natural hedges -->
     <div style="background:var(--white);border-radius:12px;padding:28px;box-shadow:0 2px 16px var(--shadow);margin-bottom:36px;">
       <h3 style="font-family:'Playfair Display',serif;color:var(--forest);font-size:1.1rem;margin-bottom:20px;">Arauco México's Existing Natural Hedges</h3>
-      <p style="font-size:0.93rem;color:var(--text-light);line-height:1.7;margin-bottom:20px;">Before designing any hedging instrument, it is essential to recognize that Arauco México already carries partial internal offsets that reduce its net FX exposure. The swap targets only the residual gap these hedges do not cover.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+      <p style="font-size:0.93rem;color:var(--text-light);line-height:1.7;margin-bottom:20px;">Before designing any instrument, we identify the internal offsets that already reduce Arauco's net FX exposure. The strategy targets only the residual gap these hedges do not cover.</p>
+      <div class="card-grid">
         <div class="card" style="border-left-color:var(--forest);">
           <div class="card-icon">🇺🇸</div>
           <h3>USD Export Revenues</h3>
-          <p>Arauco ships wood panels from its Mexican plants to U.S. customers, generating USD inflows that naturally offset a portion of USD-denominated input costs at the subsidiary level.</p>
+          <p>Arauco ships panels from Mexico to U.S. customers, generating USD inflows that naturally offset a portion of USD-denominated input costs at the subsidiary level.</p>
         </div>
         <div class="card" style="border-left-color:var(--forest);">
           <div class="card-icon">🌲</div>
           <h3>Local Wood Fiber</h3>
-          <p>Raw wood fiber is sourced domestically in Durango — a major pine-producing state. This eliminates a significant USD-denominated input, reducing overall FX sensitivity.</p>
+          <p>Raw wood fiber is sourced domestically in Durango — a major pine-producing state — eliminating a significant USD-denominated input.</p>
         </div>
         <div class="card" style="border-left-color:var(--forest);">
           <div class="card-icon">🏭</div>
           <h3>In-House Resin Plant</h3>
-          <p>The Durango facility produces resins and formalin locally, reducing reliance on USD-priced chemical imports. Only specialty chemicals (urea, methanol) remain fully exposed.</p>
+          <p>The Durango facility produces resins and formalin locally. Only specialty chemicals (urea, methanol) remain fully exposed to USD pricing.</p>
         </div>
         <div class="card" style="border-left-color:var(--gold);">
           <div class="card-icon">👷</div>
           <h3>MXN Labor &amp; Utilities</h3>
-          <p>Labor, electricity, and facility leases are contracted in pesos. When MXN depreciates, these costs fall in USD terms — partially offsetting higher peso costs of imported inputs.</p>
+          <p>Labor, electricity, and leases are contracted in pesos. When MXN depreciates, these costs fall in USD terms — partially offsetting higher peso costs of imported inputs.</p>
         </div>
       </div>
     </div>
 
-    <!-- Residual exposure -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:36px;">
+    <!-- Exposure quantification -->
+    <div class="table-wrap">
+      <div class="table-title">Residual Exposure — Urea &amp; Methanol (H2 2026)</div>
+      <table>
+        <thead><tr><th>Material</th><th>Volume (ton/mo)</th><th>Price (USD/ton)</th><th>Monthly USD</th><th>6-Month USD</th></tr></thead>
+        <tbody>
+          <tr><td>Urea (granular)</td><td>3,000</td><td>420</td><td>$1,260,000</td><td>$7,560,000</td></tr>
+          <tr><td>Methanol</td><td>1,000</td><td>340</td><td>$340,000</td><td>$2,040,000</td></tr>
+          <tr style="font-weight:600;"><td>Total</td><td>4,000</td><td>—</td><td style="color:var(--forest);">$1,600,000</td><td style="color:var(--forest);">$9,600,000</td></tr>
+        </tbody>
+      </table>
+      <div style="padding:10px 20px 14px;font-size:0.8rem;color:var(--text-light);">Sources: Urea — World Bank avg mid-2026 (~$420/ton); Methanol — Methanex Q4 2025/Q1 2026 realized price ($331–$340/ton avg).</div>
+    </div>
+
+    <!-- Key metrics -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:36px;">
       <div class="stat-card">
-        <div class="stat-label">Est. total chemical spend</div>
-        <div class="stat-value">USD 5.0M</div>
-        <div class="stat-sub">~20% of production cost</div>
+        <div class="stat-label">Spot Rate (Jun 4, 2026)</div>
+        <div class="stat-value">17.31</div>
+        <div class="stat-sub">MXN/USD</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Offset by USD export revenues</div>
-        <div class="stat-value">USD 1.8M</div>
-        <div class="stat-sub">Natural hedge — existing</div>
+        <div class="stat-label">Forward Rate (6M, CIP)</div>
+        <div class="stat-value">17.6263</div>
+        <div class="stat-sub">MXN/USD locked</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Notional</div>
+        <div class="stat-value">USD 9.6M</div>
+        <div class="stat-sub">Full H2 2026 exposure</div>
       </div>
       <div class="stat-card" style="border:1.5px solid var(--gold);">
-        <div class="stat-label">Residual unhedged exposure</div>
-        <div class="stat-value" style="color:var(--gold);">USD 2.0M</div>
-        <div class="stat-sub">Swap notional target</div>
+        <div class="stat-label">Carry Benefit (6M)</div>
+        <div class="stat-value" style="color:var(--gold);">MXN 682K</div>
+        <div class="stat-sub">2.84% rate differential</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Hedging horizon</div>
-        <div class="stat-value">6 months</div>
-        <div class="stat-sub">Jun 2026 – Nov 2026</div>
+        <div class="stat-label">Upfront Premium</div>
+        <div class="stat-value">Zero</div>
+        <div class="stat-sub">No cash outlay Day 1</div>
       </div>
     </div>
 
+    <!-- Strategy rationale -->
     <div class="highlight-box" style="margin-bottom:36px;">
-      <h3>Why a Currency Swap — and Why Not the Alternatives</h3>
-      <p>Arauco México has <strong style="color:var(--gold-light)">predictable, recurring</strong> USD cash outflows for urea and methanol — exactly the use case for which a currency swap was designed. The instrument is OTC (not a forward or a future), carries zero upfront premium, and mirrors the structure covered in class: a Mexican entity pays a fixed MXN rate (TIIE-based) and receives a fixed USD rate (SOFR-based) on a notional amount, exchanging cash flows periodically. Straddles and strangles were ruled out because they profit from volatility in both directions — Arauco is not speculating, it is hedging a cost. Plain options would require paying a premium, adding cost without improving the protection profile for a recurring, predictable exposure. The swap is the cleanest fit.</p>
+      <h3>Why a Participating Forward (Forward + Swap)?</h3>
+      <p>Arauco's exposure is <strong style="color:var(--gold-light)">fixed, predictable, and recurring</strong> — ideal for a forward lock. The Cross-Currency Swap captures the 2.84% p.a. MXN/USD rate differential (TIIE 6.50% vs SOFR 3.66%), already embedded in the forward price via Covered Interest Parity. Combined, the two legs produce a single effective rate of 17.6263 MXN/USD with zero upfront cost. Straddles and strangles were ruled out because Arauco needs cost certainty, not volatility exposure. Plain options add an upfront premium without improving the protection profile for a known, recurring obligation.</p>
     </div>
 
+    <!-- Two legs diagram -->
     <div class="swap-diagram">
-      <h3>Currency Swap Cash Flow Diagram</h3>
+      <h3>Two-Leg Structure Diagram</h3>
       <div class="swap-flow">
         <div class="swap-box">
           <div style="font-size:0.75rem;opacity:0.7;margin-bottom:4px;">COMPANY</div>
           Arauco México
         </div>
         <div class="swap-arrows">
-          <div class="arrow-row pays"><span>→</span><span>Pays MXN at TIIE (6.50%)</span></div>
-          <div class="arrow-row receives"><span>←</span><span>Receives USD at SOFR (3.65%)</span></div>
+          <div class="arrow-row pays"><span>→</span><span>Leg 1: Delivers USD at F = 17.6263 (Forward)</span></div>
+          <div class="arrow-row receives"><span>←</span><span>Receives MXN at locked rate</span></div>
         </div>
         <div class="swap-box gold-box">
           <div style="font-size:0.75rem;opacity:0.7;margin-bottom:4px;">COUNTERPARTY</div>
-          Bank / Fin. Institution
-        </div>
-        <div class="swap-arrows">
-          <div class="arrow-row pays"><span>→</span><span>Pays USD to supplier</span></div>
-          <div class="arrow-row" style="color:var(--text-light);"><span>←</span><span>Purchases urea &amp; methanol</span></div>
-        </div>
-        <div class="swap-box" style="background:var(--forest-mid);">
-          <div style="font-size:0.75rem;opacity:0.7;margin-bottom:4px;">DESTINATION</div>
-          USD Supplier
+          Banorte / BBVA / Citi
         </div>
       </div>
-      <p style="font-size:0.8rem;color:var(--text-light);margin-top:18px;">Same mechanism as the class exercise (Q1) — Arauco is on the opposite side: it holds MXN and needs USD, whereas Q1's company held USD and needed MXN.</p>
+      <div style="margin:18px 0 8px;border-top:1px dashed var(--cream-dark);padding-top:18px;">
+        <div class="swap-flow">
+          <div class="swap-box">
+            <div style="font-size:0.75rem;opacity:0.7;margin-bottom:4px;">COMPANY</div>
+            Arauco México
+          </div>
+          <div class="swap-arrows">
+            <div class="arrow-row pays"><span>→</span><span>Leg 2: Pays USD SOFR (3.66%)</span></div>
+            <div class="arrow-row receives"><span>←</span><span>Receives MXN TIIE (6.50%) — carry +2.84%</span></div>
+          </div>
+          <div class="swap-box gold-box">
+            <div style="font-size:0.75rem;opacity:0.7;margin-bottom:4px;">COUNTERPARTY</div>
+            Banorte / BBVA / Citi
+          </div>
+        </div>
+      </div>
+      <p style="font-size:0.8rem;color:var(--text-light);margin-top:16px;">Combined effective rate = 17.6263 MXN/USD · NPV = 0 at inception · Carry embedded in forward price via CIP</p>
+    </div>
+
+    <!-- Valuation / CIP formula -->
+    <div class="table-wrap">
+      <div class="table-title">Forward Rate Derivation — Covered Interest Parity (CIP)</div>
+      <div style="padding:20px 24px;font-family:monospace;font-size:0.9rem;line-height:2.2;background:#faf8f4;">
+        F = S × e^( (r_d − r_f) × T )<br>
+        F = 17.3100 × e^( (0.0650 − 0.0366) × 0.5 )<br>
+        F = 17.3100 × e^( 0.0142 )<br>
+        F = 17.3100 × 1.014302 = <strong style="color:var(--forest);">17.6263 MXN/USD</strong>
+      </div>
     </div>
 
     <div class="table-wrap">
-      <div class="table-title">Swap Contract Parameters</div>
+      <div class="table-title">All Inputs — Sourced</div>
       <table>
-        <thead><tr><th>Parameter</th><th>Value</th><th>Rationale</th></tr></thead>
+        <thead><tr><th>Input</th><th>Value</th><th>Source</th></tr></thead>
         <tbody>
-          <tr><td><strong>Instrument</strong></td><td>Cross-Currency Swap (CCS)</td><td>OTC — not a forward, future, or option</td></tr>
-          <tr><td><strong>USD Notional</strong></td><td>USD 2,000,000</td><td>Residual unhedged chemical imports after natural hedges (urea + methanol only)</td></tr>
-          <tr><td><strong>MXN Notional</strong></td><td>MXN 36,200,000</td><td>At agreed spot rate of 18.10 MXN/USD</td></tr>
-          <tr><td><strong>Agreed FX Rate</strong></td><td>18.10 MXN/USD</td><td>Current spot rate — May 2026</td></tr>
-          <tr><td><strong>Arauco pays</strong></td><td>TIIE + spread (~6.50%)</td><td>Banxico benchmark rate on MXN leg (current: 6.50%)</td></tr>
-          <tr><td><strong>Arauco receives</strong></td><td>SOFR + spread (~3.65%)</td><td>Fed benchmark rate on USD leg (current: 3.65%)</td></tr>
-          <tr><td><strong>Start date</strong></td><td>June 2026</td><td>Beginning of hedged purchase cycle</td></tr>
-          <tr><td><strong>Maturity date</strong></td><td>November 2026</td><td>Covers USMCA review window (July 2026)</td></tr>
-          <tr><td><strong>Payment frequency</strong></td><td>Monthly</td><td>Aligned with chemical procurement cycle</td></tr>
-          <tr><td><strong>Upfront cost</strong></td><td>Zero</td><td>No premium — periodic flows balanced by the interest rate differential (~285 bps)</td></tr>
+          <tr><td><strong>Spot rate (S)</strong></td><td>17.3100 MXN/USD</td><td>Investing.com / Trading Economics · Jun 4, 2026</td></tr>
+          <tr><td><strong>Mexico rate (r_d)</strong></td><td>6.50% p.a.</td><td>Banxico tasa fondeo — consensus terminal · May 2026</td></tr>
+          <tr><td><strong>US rate (r_f)</strong></td><td>3.66% p.a.</td><td>Fed IORB 3.65% · H.15 Jun 3, 2026</td></tr>
+          <tr><td><strong>Rate differential</strong></td><td>2.84% p.a.</td><td>6.50% − 3.66%</td></tr>
+          <tr><td><strong>Time to maturity (T)</strong></td><td>0.5 years</td><td>Jun 4 → Dec 4, 2026</td></tr>
+          <tr><td><strong>USD Notional</strong></td><td>$9,600,000</td><td>Monthly exposure × 6 months</td></tr>
+          <tr><td><strong>Forward rate (F)</strong></td><td style="color:var(--forest);font-weight:700;">17.6263 MXN/USD</td><td>CIP formula above</td></tr>
+          <tr><td><strong>MXN locked (total)</strong></td><td>MXN 169,212,480</td><td>$9.6M × 17.6263</td></tr>
+          <tr><td><strong>Carry benefit (6M)</strong></td><td>~MXN 682,200</td><td>2.84% differential × $9.6M × S × 0.5</td></tr>
+          <tr><td><strong>NPV at inception</strong></td><td>≈ 0</td><td>Par swap / fair-value forward (zero-cost)</td></tr>
         </tbody>
       </table>
     </div>
 
+    <!-- P&L scenarios -->
     <div class="table-wrap">
-      <div class="table-title">Swap Cash Flows — Arauco México (6-Month Horizon, USD 2M Notional)</div>
+      <div class="table-title">P&amp;L Scenario Table — Full Notional USD 9.6M</div>
       <table>
-        <thead><tr><th>Month</th><th>Arauco Pays (MXN)</th><th>Arauco Receives (USD)</th><th>MXN Equivalent Received</th><th>Net MXN Flow</th></tr></thead>
-        <tbody>
-          <tr><td>June 2026</td><td>286,250</td><td>7,500</td><td>135,750</td><td style="color:#c62828;font-weight:700;">–150,500</td></tr>
-          <tr><td>July 2026</td><td>286,250</td><td>7,500</td><td>139,500</td><td style="color:#c62828;font-weight:700;">–146,750</td></tr>
-          <tr><td>August 2026</td><td>286,250</td><td>7,500</td><td>142,500</td><td style="color:#c62828;font-weight:700;">–143,750</td></tr>
-          <tr><td>September 2026</td><td>286,250</td><td>7,500</td><td>146,250</td><td style="color:#c62828;font-weight:700;">–140,000</td></tr>
-          <tr><td>October 2026</td><td>286,250</td><td>7,500</td><td>150,000</td><td style="color:#c62828;font-weight:700;">–136,250</td></tr>
-          <tr><td>November 2026 (+ notional)</td><td>36,486,250</td><td>2,007,500</td><td>36,335,750</td><td style="color:#2e7d32;font-weight:700;">–150,500</td></tr>
-        </tbody>
+        <thead><tr><th>Spot at Maturity</th><th>Scenario</th><th>Without Hedge (MXN)</th><th>With Hedge (MXN)</th><th>Strategy P&amp;L (MXN)</th><th>Savings %</th></tr></thead>
+        <tbody id="pnl-body-main"></tbody>
       </table>
+      <div style="padding:10px 20px 14px;font-size:0.8rem;color:var(--text-light);">Cost with hedge fixed at MXN 169,212,480 = $9.6M × F regardless of spot. P&L = (F − Spot_T) × Notional. Positive = hedge saves money.</div>
     </div>
 
-    <div class="table-wrap">
-      <div class="table-title">Scenario Analysis — Residual Chemical Input Cost Without vs. With Swap</div>
-      <table>
-        <thead><tr><th>Scenario</th><th>Spot Rate (Nov 2026)</th><th>Without Swap (MXN)</th><th>With Swap (MXN)</th><th>Saving / Cost</th></tr></thead>
-        <tbody>
-          <tr><td>🐂 Bullish — Strong Peso</td><td>17.00</td><td>34,000,000</td><td>36,200,000</td><td><span class="badge badge-red">–2,200,000 MXN</span></td></tr>
-          <tr><td>⚖️ Base — No Change</td><td>18.10</td><td>36,200,000</td><td>36,200,000</td><td><span class="badge badge-blue">Neutral</span></td></tr>
-          <tr><td>🐻 Bearish — Weak Peso</td><td>19.30</td><td>38,600,000</td><td>36,200,000</td><td><span class="badge badge-green">+2,400,000 MXN</span></td></tr>
-          <tr><td>🔴 Stress — Severe Depreciation</td><td>21.00</td><td>42,000,000</td><td>36,200,000</td><td><span class="badge badge-green">+5,800,000 MXN</span></td></tr>
-        </tbody>
-      </table>
+    <!-- Payoff chart -->
+    <div class="chart-wrap">
+      <div class="chart-label">Total MXN Cost at Maturity — Without Hedge vs. With Hedge (Forward + Swap)</div>
+      <canvas id="costChart" height="100"></canvas>
     </div>
 
     <div class="chart-wrap">
-      <div class="chart-label">Residual Chemical Input Cost (MXN millions) — Without Swap vs. With Swap by FX Scenario</div>
-      <canvas id="swapChart" height="100"></canvas>
+      <div class="chart-label">Hedge Savings vs. Unhedged (MXN millions) — Break-even at F = 17.6263</div>
+      <canvas id="pnlChart" height="80"></canvas>
+    </div>
+
+    <!-- Why now / implementation -->
+    <div class="table-wrap">
+      <div class="table-title">Why This Strategy Fits Arauco — Assessment</div>
+      <table>
+        <thead><tr><th>Criterion</th><th>Assessment</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cost predictability</strong></td><td><span class="badge badge-green">✓</span> Full rate lock at F = 17.6263 — Arauco knows its MXN cost precisely</td></tr>
+          <tr><td><strong>No upfront premium</strong></td><td><span class="badge badge-green">✓</span> Zero-cost structure — no cash outlay on Day 1</td></tr>
+          <tr><td><strong>Captures rate differential</strong></td><td><span class="badge badge-green">✓</span> 2.84% p.a. MX-US differential embedded in F via CIP</td></tr>
+          <tr><td><strong>Instrument availability</strong></td><td><span class="badge badge-green">✓</span> Standard OTC — available at Banorte, BBVA, Citibanamex</td></tr>
+          <tr><td><strong>Upside participation</strong></td><td><span class="badge badge-red">✗</span> Foregone if peso strengthens significantly (opportunity cost only, not a real loss)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-title">Implementation Roadmap</div>
+      <table>
+        <thead><tr><th>Step</th><th>Timeline</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1 — Treasury auth</strong></td><td>Week 1</td><td>Board approval for hedging program and notional limit</td></tr>
+          <tr><td><strong>2 — Bank quotes</strong></td><td>Week 1–2</td><td>Request forward + swap quotes from Banorte, BBVA, Citi</td></tr>
+          <tr><td><strong>3 — ISDA docs</strong></td><td>Week 2–3</td><td>Execute ISDA Master Agreement + CSA with selected counterparty</td></tr>
+          <tr><td><strong>4 — Trade execution</strong></td><td>Week 3</td><td>Enter 6M forward at F = 17.6263 + matching swap</td></tr>
+          <tr><td><strong>5 — MTM reporting</strong></td><td>Monthly</td><td>Mark-to-market valuation reported to CFO</td></tr>
+          <tr><td><strong>6 — Settlement</strong></td><td>Dec 4, 2026</td><td>Deliver USD at F = 17.6263, receive MXN. Swap terminates.</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <details>
       <summary>References — Hedging Strategy</summary>
-      <div>Sources: Deliverable 1 Report (Team 3, May 2026) — Sections III-C, IV-A and IV-B (natural hedge analysis, chemical input exposure); Banco de México — TIIE 28-day rate; U.S. Federal Reserve — SOFR Reference Rate; CME Group — Urea and Methanol Spot &amp; Futures; Hull, J.C. (2018) <em>Options, Futures, and Other Derivatives</em>, Ch. 7 — Currency Swaps; ISDA Master Agreement — Cross-Currency Swap Documentation.</div>
+      <div>Sources: Deliverable 1 Report (Team 3, May 2026) — natural hedge analysis; Banxico Encuesta de Expectativas (May 2026) — terminal rate and FX forecasts; Federal Reserve H.15 (Jun 3, 2026) — IORB 3.65%; Investing.com / Trading Economics — USD/MXN spot Jun 4, 2026; World Bank commodity prices — Urea mid-2026; Methanex Q4 2025/Q1 2026 realized methanol price; Citi México Survey (Jan 2026) — 35-bank consensus USD/MXN forecast; Hull, J.C. (2018) <em>Options, Futures, and Other Derivatives</em>, Ch. 5 &amp; 7 — Forward pricing, CIP, Currency Swaps; ISDA Master Agreement documentation.</div>
     </details>
   </section>
-
 </main>
 
 <footer>
@@ -550,23 +607,49 @@ function initMacroCharts(){
   });
 }
 
-let swapInited=false;
+let hedgingChartsBuilt=false;
 function initSwapChart(){
-  if(swapInited)return; swapInited=true;
-  new Chart(document.getElementById('swapChart'),{
-    type:'bar',
-    data:{
-      labels:['Bullish (17.00)','Base (18.10)','Bearish (19.30)','Stress (21.00)'],
-      datasets:[
-        {label:'Without Swap (MXN)',data:[34.0,36.2,38.6,42.0],backgroundColor:'rgba(198,40,40,0.7)',borderRadius:5},
-        {label:'With Swap (MXN)',data:[36.2,36.2,36.2,36.2],backgroundColor:'rgba(45,74,45,0.75)',borderRadius:5}
-      ]
-    },
-    options:{
-      responsive:true,
-      plugins:{legend:{position:'top'},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': $'+ctx.parsed.y.toFixed(2)+'M MXN'}}},
-      scales:{y:{min:30,max:45,grid:{color:CREAM},ticks:{callback:v=>'$'+v+'M'}},x:{grid:{display:false}}}
-    }
+  if(hedgingChartsBuilt)return; hedgingChartsBuilt=true;
+  const S=17.31,r_d=0.065,r_f=0.0366,T=0.5,N=9600000;
+  const F=S*Math.exp((r_d-r_f)*T);
+  const spots=[15.5,16.0,16.5,17.0,17.31,17.5,17.867,18.5,19.0,19.5,20.0,20.3];
+  const scenLabel=(s)=>s<=16.5?'Bullish peso':s>=19.0?'Bearish peso':s===17.31?'Today spot':s<=17.63?'Near forward':'Base';
+  const scenBadge=(s)=>s<=16.5?'badge-green':s>=19.0?'badge-red':'badge-gold';
+  const body=document.getElementById('pnl-body-main');
+  if(body){
+    spots.forEach(st=>{
+      const noHedge=st*N,withHedge=F*N,savings=noHedge-withHedge;
+      const savPct=(savings/noHedge*100).toFixed(1);
+      const tr=document.createElement('tr');
+      tr.innerHTML=`<td style="font-weight:600;">${st.toFixed(2)}</td>
+        <td><span class="badge ${scenBadge(st)}">${scenLabel(st)}</span></td>
+        <td>${Math.round(noHedge).toLocaleString('en-US')}</td>
+        <td style="color:var(--forest);font-weight:600;">${Math.round(withHedge).toLocaleString('en-US')}</td>
+        <td style="font-weight:700;color:${savings>=0?'#2e7d32':'#c62828'}">${savings>=0?'+':''}${Math.round(savings).toLocaleString('en-US')}</td>
+        <td style="font-weight:700;color:${savings>=0?'#2e7d32':'#c62828'}">${savings>=0?'+':''}${savPct}%</td>`;
+      body.appendChild(tr);
+    });
+  }
+  const pts=[];
+  for(let s=15.0;s<=21.0;s+=0.1){ const st=parseFloat(s.toFixed(1)); pts.push({x:st,noH:st*N/1e6,wH:F*N/1e6,pnl:(st*N-F*N)/1e6}); }
+  const labels=pts.map(p=>p.x.toFixed(1));
+  new Chart(document.getElementById('costChart'),{
+    type:'line',
+    data:{labels,datasets:[
+      {label:'Without Hedge (MXN)',data:pts.map(p=>+p.noH.toFixed(2)),borderColor:'#c62828',borderWidth:2.5,pointRadius:0,tension:0.1},
+      {label:'With Hedge (MXN)',data:pts.map(p=>+p.wH.toFixed(2)),borderColor:FOREST,borderWidth:2.5,pointRadius:0,tension:0,borderDash:[]}
+    ]},
+    options:{responsive:true,plugins:{legend:{position:'top'},tooltip:{callbacks:{label:ctx=>`MXN ${ctx.parsed.y.toFixed(1)}M`}}},
+      scales:{y:{grid:{color:CREAM},ticks:{callback:v=>'$'+v+'M'}},x:{grid:{color:CREAM},ticks:{maxTicksLimit:9}}}}
+  });
+  new Chart(document.getElementById('pnlChart'),{
+    type:'line',
+    data:{labels,datasets:[
+      {label:'Hedge Savings (MXN M)',data:pts.map(p=>+p.pnl.toFixed(2)),borderColor:GOLD,borderWidth:2.5,pointRadius:0,tension:0.1,
+       fill:{target:'origin',above:'rgba(45,74,45,0.07)',below:'rgba(198,40,40,0.07)'}}
+    ]},
+    options:{responsive:true,plugins:{legend:{position:'top'},tooltip:{callbacks:{label:ctx=>`MXN ${ctx.parsed.y.toFixed(1)}M`}}},
+      scales:{y:{grid:{color:CREAM},ticks:{callback:v=>'$'+v+'M'},title:{display:true,text:'Savings (MXN M)'}},x:{grid:{color:CREAM},ticks:{maxTicksLimit:9}}}}
   });
 }
 </script>
