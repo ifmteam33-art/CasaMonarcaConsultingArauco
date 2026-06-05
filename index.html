@@ -258,7 +258,7 @@
 
     <div class="highlight-box">
       <h3>Executive Summary</h3>
-      <p>Casa Monarca Consulting recommends a Synthetic Call (Long Forward + Long Put) on USD 9.6M, covering Arauco México's full H2 2026 urea and methanol exposure. The forward leg locks in the rate at F = K = 17.6263 MXN/USD via CIP, while the put (Garman-Kohlhagen, σ = 10.5%) provides upside participation if the peso appreciates. Put premium: MXN 0.5344/USD (total MXN 5,130,240). Break-even spot at maturity: 18.1607 MXN/USD. The hedge matures December 4, 2026.</p>
+      <p>Casa Monarca Consulting recommends a Synthetic Call (Long Forward + Long Put) on USD 9.6M, covering Arauco México's full H2 2026 urea and methanol exposure. The forward leg locks in the rate at F = K = 17.6263 MXN/USD via CIP, while the put (Black-Scholes, σ = 10.5%) provides upside participation if the peso appreciates. Put premium: MXN 0.5344/USD (total MXN 5,130,240). Break-even spot at maturity: 18.1607 MXN/USD. The hedge matures December 4, 2026.</p>
     </div>
   </section>
 
@@ -325,6 +325,60 @@
           <tr><td>Methanol price</td><td colspan="2">USD 380/ton</td><td><span class="badge badge-gold">Stable</span></td></tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- DEPRECIATION OUTLOOK -->
+    <div style="background:var(--forest);border-radius:12px;padding:32px 36px;margin-bottom:36px;position:relative;overflow:hidden;">
+      <div style="position:absolute;right:-30px;bottom:-30px;width:160px;height:160px;border-radius:50%;background:rgba(184,144,42,0.12);"></div>
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px;">Casa Monarca View</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--cream);margin-bottom:14px;">Our Expectation: MXN Depreciation Through H2 2026</h3>
+      <p style="font-size:0.95rem;color:rgba(247,243,236,0.8);line-height:1.8;max-width:780px;">Casa Monarca Consulting expects the USD/MXN rate to rise materially from current levels of 17.31 toward the 18.50–19.00 range by December 2026. This directional view is the core rationale for the Synthetic Call strategy — Arauco should hedge now, before depreciation materializes. The key drivers supporting this outlook are presented below.</p>
+    </div>
+
+    <div class="card-grid" style="margin-bottom:40px;">
+      <div class="card" style="border-left-color:#c62828;">
+        <div class="card-icon">📋</div>
+        <h3>Analyst Consensus: Peso Weakens</h3>
+        <p>The Citi México Survey of 35 banks (Jan 2026) projects USD/MXN at <strong>~19.00</strong> by end-2026 — a 9.8% depreciation from today. Banca Mifel projects 20.30; even the most bullish forecast (XP Investments) sits at 17.10. The distribution is skewed to the upside for USD. Hacienda's own projection is 18.40. Vanguard's range: 17.50–18.50.</p>
+      </div>
+      <div class="card" style="border-left-color:#c62828;">
+        <div class="card-icon">✂️</div>
+        <h3>Banxico Easing Erodes Carry Advantage</h3>
+        <p>Banxico has cut rates 13 times since early 2024, reaching a terminal rate of 6.50%. As the MXN/USD interest rate differential compresses from its peak, the carry trade that kept the peso strong in 2025 becomes less attractive. FXStreet analysts note that "Banxico easing and carry trade unwinding could gradually erode MXN support in 2026." A narrowing differential means less foreign capital flowing into peso assets.</p>
+      </div>
+      <div class="card" style="border-left-color:#c62828;">
+        <div class="card-icon">📜</div>
+        <h3>USMCA Review — Single Largest Risk</h3>
+        <p>The July 2026 USMCA review is described by RioTimes as "the single most consequential near-term risk" for the peso. Trump has publicly called the agreement "irrelevant" for the U.S. Washington is expected to demand concessions on migration, drug enforcement, and Chinese investment. Any adverse outcome — tariffs, partial withdrawal, prolonged uncertainty — would trigger immediate peso sell-off. Even the review process itself creates persistent risk-off pressure.</p>
+      </div>
+      <div class="card" style="border-left-color:#c62828;">
+        <div class="card-icon">📉</div>
+        <h3>GDP Contraction + Weak Investment</h3>
+        <p>Mexico's economy contracted 0.6% QoQ in Q1 2026 (INEGI), with Banxico revising its full-year forecast down to 1.1%. The IGAE index fell 0.9% month-on-month in January — the sharpest drop since late 2024. Manufacturing employment has fallen for 35 consecutive months. Banco Base's Gabriela Siller warns 2026 will be "a year with many economic challenges" with economic stagnation and potential inflation resurgence. Weak growth reduces demand for MXN assets.</p>
+      </div>
+      <div class="card" style="border-left-color:#c62828;">
+        <div class="card-icon">🌍</div>
+        <h3>Global Risk-Off + Remittance Decline</h3>
+        <p>Geopolitical tensions (Middle East, US-China) push investors toward safe-haven USD and away from emerging market currencies like the peso. Mexico News Daily (Mar 2026) notes that "escalating tensions in the Middle East have caused investors to move into USD and gold, putting downward pressure on EM currencies." Compounding this: remittances — a key peso support — fell to $61.8B in 2025 from $64.7B in 2024, the first decline in 12 years, driven by stricter US immigration enforcement.</p>
+      </div>
+      <div class="card" style="border-left-color:var(--gold);">
+        <div class="card-icon">⚖️</div>
+        <h3>The Bull Case (Why We Still Hedge)</h3>
+        <p>The peso could hold or strengthen if: USMCA resolves favorably, World Cup tourism (Mexico hosts Jun–Jul 2026) boosts FX inflows, or the Fed cuts faster than expected. Monex's Janneth Quiroz sees a "favourable negotiation process." But as Mexico News Daily's CEO writes: <em>"I don't see any factors in the short term that would point to a strengthening of the peso using standard economic theory."</em> The asymmetric risk justifies the Synthetic Call premium.</p>
+      </div>
+    </div>
+
+    <div style="background:var(--cream-dark);border-radius:10px;padding:20px 24px;margin-bottom:36px;">
+      <div style="font-size:0.8rem;font-weight:700;color:var(--forest);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase;">Forecast Summary — USD/MXN End-2026</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:10px;">
+        <div style="text-align:center;background:var(--white);border-radius:8px;padding:10px 8px;"><div style="font-size:0.7rem;color:var(--text-light);font-weight:700;">Citi (35 banks)</div><div style="font-size:1.3rem;font-family:'Playfair Display',serif;font-weight:700;color:#c62828;">19.00</div></div>
+        <div style="text-align:center;background:var(--white);border-radius:8px;padding:10px 8px;"><div style="font-size:0.7rem;color:var(--text-light);font-weight:700;">Hacienda</div><div style="font-size:1.3rem;font-family:'Playfair Display',serif;font-weight:700;color:#c62828;">18.40</div></div>
+        <div style="text-align:center;background:var(--white);border-radius:8px;padding:10px 8px;"><div style="font-size:0.7rem;color:var(--text-light);font-weight:700;">Vanguard range</div><div style="font-size:1.3rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--gold);">17.50–18.50</div></div>
+        <div style="text-align:center;background:var(--white);border-radius:8px;padding:10px 8px;"><div style="font-size:0.7rem;color:var(--text-light);font-weight:700;">Banxico survey</div><div style="font-size:1.3rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--gold);">17.90–17.95</div></div>
+        <div style="text-align:center;background:var(--white);border-radius:8px;padding:10px 8px;"><div style="font-size:0.7rem;color:var(--text-light);font-weight:700;">Banca Mifel (bear)</div><div style="font-size:1.3rem;font-family:'Playfair Display',serif;font-weight:700;color:#c62828;">20.30</div></div>
+        <div style="text-align:center;background:var(--white);border-radius:8px;padding:10px 8px;"><div style="font-size:0.7rem;color:var(--text-light);font-weight:700;">XP Inv. (bull)</div><div style="font-size:1.3rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--forest);">17.10</div></div>
+        <div style="text-align:center;background:var(--forest);border-radius:8px;padding:10px 8px;"><div style="font-size:0.7rem;color:var(--gold-light);font-weight:700;">Casa Monarca view</div><div style="font-size:1.3rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--gold-light);">18.50–19.00</div></div>
+      </div>
     </div>
 
     <details>
@@ -457,9 +511,9 @@
           <div style="margin-top:12px;font-size:0.8rem;font-weight:700;color:var(--forest);">Payoff = (S_T − K) × N  if S_T > K</div>
         </div>
         <div style="background:var(--cream);border-radius:10px;padding:20px;border-left:4px solid var(--gold);">
-          <div style="font-size:0.72rem;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:8px;">LEG 2 — LONG PUT (GK)</div>
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:8px;">LEG 2 — LONG PUT (B-S)</div>
           <div style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--forest);font-weight:600;margin-bottom:10px;">Put Option on USD/MXN</div>
-          <p style="font-size:0.88rem;color:var(--text-light);line-height:1.65;">Arauco buys the right to <em>sell</em> USD at K = <strong>17.6263</strong> if peso appreciates below strike. Priced via Garman-Kohlhagen (σ = 10.5%, T = 0.5y). Premium: <strong>MXN 0.5344/USD</strong>.</p>
+          <p style="font-size:0.88rem;color:var(--text-light);line-height:1.65;">Arauco buys the right to <em>sell</em> USD at K = <strong>17.6263</strong> if peso appreciates below strike. Priced via Black-Scholes (σ = 10.5%, T = 0.5y). Premium: <strong>MXN 0.5344/USD</strong>.</p>
           <div style="margin-top:12px;font-size:0.8rem;font-weight:700;color:var(--gold);">Payoff = max(K − S_T, 0) × N  − Premium</div>
         </div>
       </div>
@@ -468,9 +522,9 @@
       </div>
     </div>
 
-    <!-- Garman-Kohlhagen valuation -->
+    <!-- Black-Scholes valuation -->
     <div class="table-wrap">
-      <div class="table-title">Put Option Valuation — Garman-Kohlhagen Model</div>
+      <div class="table-title">Put Option Valuation — Black-Scholes Model</div>
       <div style="padding:20px 24px;font-family:monospace;font-size:0.88rem;line-height:2.3;background:#faf8f4;overflow-x:auto;">
         d₁ = [ln(S/K) + (r_d − r_f + σ²/2)·T] / (σ·√T)<br>
         d₁ = [ln(17.31/17.6263) + (0.065 − 0.0366 + 0.005513) × 0.5] / (0.105 × √0.5)<br>
@@ -495,7 +549,7 @@
           <tr><td><strong>Implied volatility σ</strong></td><td>10.5% p.a.</td><td>USD/MXN 6M implied vol — BBVA/Bloomberg mid-2026</td></tr>
           <tr><td><strong>Time to maturity T</strong></td><td>0.5 years</td><td>Jun 4 → Dec 4, 2026</td></tr>
           <tr><td><strong>Notional N</strong></td><td>USD 9,600,000</td><td>Monthly USD 1.6M × 6 months</td></tr>
-          <tr><td><strong>Put premium (per USD)</strong></td><td style="color:var(--gold);font-weight:700;">0.5344 MXN/USD</td><td>Garman-Kohlhagen formula above</td></tr>
+          <tr><td><strong>Put premium (per USD)</strong></td><td style="color:var(--gold);font-weight:700;">0.5344 MXN/USD</td><td>Black-Scholes formula above</td></tr>
           <tr><td><strong>Total premium</strong></td><td style="color:var(--gold);font-weight:700;">MXN 5,130,240</td><td>0.5344 × 9,600,000</td></tr>
           <tr><td><strong>Break-even S_T</strong></td><td style="color:var(--forest);font-weight:700;">18.1607 MXN/USD</td><td>K + premium/USD = 17.6263 + 0.5344</td></tr>
         </tbody>
@@ -625,7 +679,7 @@
           <div style="background:var(--cream);border-radius:10px;padding:14px 16px;">
             <div style="font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin-bottom:5px;">Put Premium/USD</div>
             <div id="sim-premium-per" style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gold);">0.5344</div>
-            <div style="font-size:0.75rem;color:var(--text-light);">MXN/USD (GK)</div>
+            <div style="font-size:0.75rem;color:var(--text-light);">MXN/USD (B-S)</div>
           </div>
           <div style="background:var(--cream);border-radius:10px;padding:14px 16px;">
             <div style="font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin-bottom:5px;">Total Premium</div>
@@ -674,7 +728,7 @@
 
     <details>
       <summary>References — Hedging Strategy</summary>
-      <div>Sources: Deliverable 1 Report (Team 3, May 2026) — natural hedge analysis; Banxico Encuesta de Expectativas (May 2026) — terminal rate; Federal Reserve H.15 (Jun 3, 2026) — IORB 3.66%; Investing.com / Trading Economics — USD/MXN spot Jun 4, 2026; BBVA/Bloomberg — USD/MXN 6M implied volatility (~10.5%); World Bank commodity prices — Urea mid-2026; Methanex Q4 2025/Q1 2026 — methanol realized price; Citi México Survey — 35-bank USD/MXN consensus; Garman, M. &amp; Kohlhagen, S. (1983) "Foreign currency option values", <em>Journal of International Money and Finance</em>; Hull, J.C. (2018) <em>Options, Futures, and Other Derivatives</em>, Ch. 17 — Currency Options; ISDA Master Agreement documentation.</div>
+      <div>Sources: Deliverable 1 Report (Team 3, May 2026) — natural hedge analysis; Banxico Encuesta de Expectativas (May 2026) — terminal rate; Federal Reserve H.15 (Jun 3, 2026) — IORB 3.66%; Investing.com / Trading Economics — USD/MXN spot Jun 4, 2026; BBVA/Bloomberg — USD/MXN 6M implied volatility (~10.5%); Black, F. &amp; Scholes, M. (1973); World Bank commodity prices — Urea mid-2026; Methanex Q4 2025/Q1 2026 — methanol realized price; Citi México Survey — 35-bank USD/MXN consensus; Black, F. &amp; Scholes, M. (1973) "The Pricing of Options and Corporate Liabilities", <em>Journal of Political Economy</em>; Hull, J.C. (2018) <em>Options, Futures, and Other Derivatives</em>, Ch. 17 — Currency Options; ISDA Master Agreement documentation.</div>
     </details>
   </section>
 </main>
@@ -704,7 +758,7 @@ function safeChartDefaults() {
   }
 }
 
-// ── GARMAN-KOHLHAGEN ─────────────────────────────────────
+// ── BLACK-SCHOLES (Currency-Adjusted) ────────────────────
 function normCDF(x) {
   const a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
   const sign = x < 0 ? -1 : 1;
@@ -713,7 +767,7 @@ function normCDF(x) {
   return 0.5*(1+sign*(1-poly*Math.exp(-x*x/2)));
 }
 
-function gkPut(S, K, rd, rf, sigma, T) {
+function bsPut(S, K, rd, rf, sigma, T) {
   const sqT = Math.sqrt(T);
   const d1 = (Math.log(S/K) + (rd - rf + 0.5*sigma*sigma)*T) / (sigma*sqT);
   const d2 = d1 - sigma*sqT;
@@ -780,7 +834,7 @@ function initHedgingCharts() {
   safeChartDefaults();
 
   const S0=17.31, K=17.6263, rd=0.065, rf=0.0366, sigma=0.105, T=0.5, N=9600000;
-  const premium = gkPut(S0, K, rd, rf, sigma, T);
+  const premium = bsPut(S0, K, rd, rf, sigma, T);
   const totalPrem = premium * N;
   const breakeven = K + premium;
 
@@ -843,8 +897,8 @@ function initSimulator() {
     document.getElementById('sim-vol-val').textContent     = (sigma*100).toFixed(1)+'%';
     document.getElementById('sim-notional-val').textContent= '$'+(N/1e6).toFixed(1)+'M';
 
-    // Garman-Kohlhagen put
-    const premPerUSD   = gkPut(S0, K, rd, rf, sigma, T);
+    // Black-Scholes put
+    const premPerUSD   = bsPut(S0, K, rd, rf, sigma, T);
     const totalPrem    = premPerUSD * N;
     const breakeven    = K + premPerUSD;
 
